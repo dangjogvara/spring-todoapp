@@ -1,9 +1,7 @@
 package com.dangjogvara.todoapp.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -12,6 +10,8 @@ public class Todo {
     @GeneratedValue
     private Long id;
     private String text;
+    @ManyToOne
+    private Author author;
 
     public Todo() {
     }
